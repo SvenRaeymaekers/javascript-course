@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Lesson 9</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+  <button id="button1">9a</button>
+  <button id="button2">9b</button>
+
+  <button class="heads-button" onclick="setFlipResult('heads');">heads</button>
+  <button class="tails-button" onclick="setFlipResult('tails');">tails</button>
+  <p id="js-flip-result"></p>
+
+
+  <input type="text" placeholder="Name" id="username" onkeydown="setNameOnEnter(event);">
+  <button id="submit-button" onclick="setName();" ;>Submit</button>
+  <p id="name-result"></p>
+
+  <input type="text" id="price-input" placeholder="Price">
+  <button id="calculate-price-btn" onclick="calculatePrice();">Calculate</button>
+  <p id="price-result"></p>
+
+
+  <input id="live-input" type="text" placeholder="Fill in text" onkeyup="setLiveText()">
+  <p id="setLiveText-result"></p>
+
+
+
+
+  <script>
+    const buttonElement = document.querySelector("#button1")
+    console.log(buttonElement);
+
+    const buttonElement9b = document.querySelector("#button2");
+    buttonElement9b.innerHTML = "9b done!";
+
+
+    function setFlipResult(result) {
+      if (result === "heads") {
+        document.querySelector("#js-flip-result").innerHTML = "You chose: heads";
+
+      }
+      if (result === "tails") {
+        document.querySelector("#js-flip-result").innerHTML = "You chose: tails";
+
+      }
+    }
+
+    function setName() {
+      document.querySelector("#name-result").innerHTML = "Your name is: " + document.querySelector("#username").value;
+    }
+
+    function setNameOnEnter(event) {
+
+      if (event.code === "Enter") {
+        setName();
+      }
+
+    }
+
+    function calculatePrice() {
+
+      let price = Number(document.querySelector("#price-input").value);
+
+      if (price < 40) {
+        price = (price * 100 + 1000) / 100;
+      }
+
+      document.querySelector("#price-result").innerHTML = `Your price is: $${price}`;
+
+    }
+
+    function setLiveText() {
+      document.querySelector("#setLiveText-result").innerHTML = document.querySelector("#live-input").value;
+    }
+
+
+
+  </script>
+</body>
+
+</html>
