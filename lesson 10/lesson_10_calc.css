@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+
+  font-family: Arial;
+
+}
+
+.calculator {
+  border: solid 1px white;
+  display: inline-block;
+  width: 200px;
+  margin: 20px;
+  padding: 20px;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.result {
+  color: white;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  color: white;
+  border: solid 1px white;
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 20px;
+  background-color: rgb(83, 83, 83);
+  border: none;
+  cursor: pointer;
+
+}
+
+.plus, .multiply, .minus, .divide {
+  background-color: orange;
+}
+
+.clear {
+  font-size: 10px;
+}
