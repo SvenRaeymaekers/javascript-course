@@ -5,6 +5,10 @@ body {
 
 }
 
+div {
+
+}
+
 .calculator {
   border: solid 1px white;
   display: inline-block;
@@ -21,8 +25,10 @@ body {
 
 .result {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 10px;
+  height: 25px;
+  padding-left: 8px;
 }
 
 .btn {
@@ -48,5 +54,9 @@ body {
 }
 
 .clear {
+  font-size: 10px;
+}
+
+.correction {
   font-size: 10px;
 }
